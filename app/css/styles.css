@@ -1,0 +1,76 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,400i|Raleway:400,600,700|Roboto:400,500,700");
+html, body {
+  min-width: 320px; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  scroll-behavior: smooth; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.hidden {
+  display: none; }
+
+html {
+  font-size: 16px;
+  line-height: 1.5; }
+  @media only screen and (min-width: 460px) {
+    html {
+      font-size: 18px; } }
+  @media only screen and (min-width: 600px) {
+    html {
+      font-size: 20px; } }
+
+body, input, select, textarea {
+  color: black;
+  font-family: Helvetica, sans-serif; }
+
+body {
+  background: rgba(255, 255, 0, 0.3); }
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  line-height: 1.25;
+  margin: 1.75em 0 0.75em;
+  font-family: Helvetica, sans-serif; }
+  @media only screen and (min-width: 600px) {
+    h1, h2, h3, h4 {
+      margin: 2em 0 1em; } }
+
+h1 {
+  font-size: 2em;
+  margin-top: 1em; }
+
+h2 {
+  font-size: 1.75em;
+  margin-top: 1em; }
+
+/* When an h2 is directly after an h1 */
+h1 + h2 {
+  margin-top: 0.75em; }
+
+h3 {
+  font-size: 1.5em; }
+
+/* When an h2 is directly after an h1 */
+h3 + h4 {
+  margin-top: 0.75em; }
+
+a, a:hover, a:focus, a:active {
+  color: tomato;
+  text-decoration: none; }
+
+em, i {
+  font-style: italic; }
