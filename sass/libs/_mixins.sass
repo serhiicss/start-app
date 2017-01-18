@@ -1,0 +1,26 @@
+/*-------------Transition------------------*/
+
+=trans($time)
+	transition: all $time+s ease
+
+/*---------------Buttons----------------*/
+
+=button($bg-color, $font-color)
+	background: $bg-color
+	color: $font-color
+	border-color: $font-color
+
+	&:focus
+	border-color: $font-color
+	background: $bg-color
+	color: $font-color
+
+	&:hover
+		color: $font-color
+		background: lighten($bg-color, 20%)
+
+	&:active
+		background: lighten($bg-color, 30%)
+		top: 2px
+
+/*-------------------------------*/

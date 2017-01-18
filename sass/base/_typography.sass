@@ -1,37 +1,36 @@
 html
-	font-size: 16px
+	font-size: 62.5%
 	line-height: 1.5
 
 	@media only screen and (min-width: 460px)
-		font-size: 18px
+		// font-size: 18px
 
 	@media only screen and (min-width: 600px)
-		font-size: 20px
+		// font-size: 20px
 
 body, input, select, textarea
-	color: black
-	font-family: Helvetica, sans-serif
+	font-family: $font-primary, sans-serif
 
 body 
-	background: rgba(yellow, 0.3)
+	background-color: $color-bg
 
 h1, h2, h3, h4
 	font-weight: bold
-	line-height: 1.25
-	margin: 1.75em 0 0.75em
-	font-family: Helvetica, sans-serif
+	line-height: 1.5
+	font-family: $font-secondary
+	color: $heading-dark
+	text-transform: uppercase
 
 	@media only screen and (min-width: 600px)
-		margin: 2em 0 1em
+		// margin: 2em 0 1em
 
 h1
-	font-size: 2em
+	font-size: 7rem
 	margin-top: 1em
 
 h2
-	font-size: 1.75em
+	font-size: 5rem
 	margin-top: 1em
-
 
 /* When an h2 is directly after an h1 */
 
@@ -39,7 +38,7 @@ h1 + h2
 	margin-top: 0.75em
 
 h3
-	font-size: 1.5em
+	font-size: 3.4rem
 
 
 /* When an h2 is directly after an h1 */
@@ -47,8 +46,12 @@ h3
 h3 + h4
 	margin-top: 0.75em
 
+p
+	font-size: 2rem
+	color: $text-dark
+	line-height: 1.6
+
 a, a:hover, a:focus, a:active
-	color: tomato
 	text-decoration: none
 
 em, i
