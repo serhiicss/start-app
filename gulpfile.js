@@ -17,7 +17,8 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('sass/**/*.sass')
 	.pipe(sass({
-		includePaths: require("bourbon").includePaths}).on("error", notify.onError()))
+		includePaths: bourbon.includePaths
+	}).on("error", notify.onError()))
 	//.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	//.pipe(cleanCSS())
