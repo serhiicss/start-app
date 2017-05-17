@@ -2,7 +2,7 @@ var gulp           = require('gulp'),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
 		autoprefixer   = require('gulp-autoprefixer'),
-		bourbon        = require('node-bourbon'),
+		deploy         = require('gulp-gh-pages'),
 		notify         = require("gulp-notify");
 
 gulp.task('browser-sync', function() {
@@ -16,9 +16,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('sass', function() {
 	return gulp.src('sass/**/*.sass')
-	.pipe(sass({
-		includePaths: bourbon.includePaths
-	}).on("error", notify.onError()))
+	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
 	//.pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	//.pipe(cleanCSS())
@@ -33,3 +31,18 @@ gulp.task('watch', ['sass', 'browser-sync'], function() {
 });
 
 gulp.task('default', ['watch']);
+
+//---------------------------------------------
+
+// Push build to gh-pages
+gulp.task('deploy', function () {
+  return gulp.src("./app/**/*")
+    .pipe(deploy())
+});
+
+//---------------------------------------------
+
+// References
+
+// deploy to gh-pages:
+// https://medium.com/superhighfives/deploying-to-github-pages-with-gulp-c06efc527de8
