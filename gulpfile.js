@@ -2,6 +2,7 @@ var gulp           = require('gulp'),
 		sass           = require('gulp-sass'),
 		browserSync    = require('browser-sync'),
 		autoprefixer   = require('gulp-autoprefixer'),
+    		cleanCSS       = require('gulp-clean-css'),
 		deploy         = require('gulp-gh-pages'),
 		notify         = require("gulp-notify");
 
